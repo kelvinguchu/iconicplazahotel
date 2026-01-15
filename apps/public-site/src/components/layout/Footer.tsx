@@ -12,7 +12,10 @@ const exploreLinks = [
 const socialLinks = [
   { icon: FiFacebook, href: '#' },
   { icon: FiTwitter, href: '#' },
-  { icon: FiInstagram, href: '#' },
+  {
+    icon: FiInstagram,
+    href: 'https://www.instagram.com/iconic_plaza_hotel?igsh=MTFia3JxbDJocmw4aw==',
+  },
   { icon: FiYoutube, href: '#' },
 ]
 
