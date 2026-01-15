@@ -14,7 +14,7 @@ const socialLinks = [
   { icon: FiTwitter, href: '#' },
   {
     icon: FiInstagram,
-    href: 'https://www.instagram.com/iconic_plaza_hotel?igsh=MTFia3JxbDJocmw4aw==',
+    href: 'https://www.instagram.com/iconicplazahotel/',
   },
   { icon: FiYoutube, href: '#' },
 ]
@@ -48,7 +48,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#1a1a1a] text-white py-20">
+    <footer className="bg-background text-foreground py-20">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
           {/* About Column with Logo */}
@@ -60,7 +60,7 @@ export default function Footer() {
                 className="h-14 w-auto"
               />
             </Link>
-            <p className="text-white/60 leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed mb-6">
               Welcome to the finest luxury hotel experience. Our hotel combines
               elegant design with world-class amenities to create an
               unforgettable stay.
@@ -72,7 +72,9 @@ export default function Footer() {
                 <a
                   key={index}
                   href={social.href}
-                  className="w-10 h-10 border border-white/20 flex items-center justify-center hover:border-white/50 transition-colors cursor-pointer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 border border-foreground/20 flex items-center justify-center hover:border-foreground/50 transition-colors cursor-pointer"
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
@@ -94,14 +96,14 @@ export default function Footer() {
                   {link.href.startsWith('/') && !link.href.includes('#') ? (
                     <Link
                       to={link.href}
-                      className="text-white/60 hover:text-white transition-colors text-sm cursor-pointer"
+                      className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer"
                     >
                       {link.name}
                     </Link>
                   ) : (
                     <button
                       onClick={() => handleNavClick(link.href)}
-                      className="text-white/60 hover:text-white transition-colors text-sm cursor-pointer text-left"
+                      className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer text-left"
                     >
                       {link.name}
                     </button>
@@ -119,13 +121,13 @@ export default function Footer() {
             >
               Contact
             </h3>
-            <div className="space-y-4 text-white/60 text-sm">
+            <div className="space-y-4 text-muted-foreground text-sm">
               <p>Kenyatta Avenue</p>
               <p>Nairobi, Kenya</p>
               <p className="pt-2">
                 <a
                   href="tel:+254700123456"
-                  className="hover:text-white transition-colors cursor-pointer"
+                  className="hover:text-foreground transition-colors cursor-pointer"
                 >
                   +254 700 123 456
                 </a>
@@ -133,7 +135,7 @@ export default function Footer() {
               <p>
                 <a
                   href="mailto:reservations@iconicplazahotels.com"
-                  className="hover:text-white transition-colors cursor-pointer"
+                  className="hover:text-foreground transition-colors cursor-pointer"
                 >
                   reservations@iconicplazahotels.com
                 </a>
@@ -141,7 +143,7 @@ export default function Footer() {
               <p>
                 <a
                   href="mailto:helpdesk@iconicplazahotels.com"
-                  className="hover:text-white transition-colors cursor-pointer"
+                  className="hover:text-foreground transition-colors cursor-pointer"
                 >
                   helpdesk@iconicplazahotels.com
                 </a>
@@ -151,8 +153,8 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-16 pt-8 border-t border-white/10 text-center">
-          <p className="text-white/40 text-sm">
+        <div className="mt-16 pt-8 border-t border-foreground/10 text-center">
+          <p className="text-muted-foreground/70 text-sm">
             © {new Date().getFullYear()} Iconic Plaza Hotel. All rights
             reserved.
           </p>

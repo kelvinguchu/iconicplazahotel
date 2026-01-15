@@ -13,7 +13,7 @@ interface RoomDetailsProps {
 
 export default function RoomDetails({ room }: RoomDetailsProps) {
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-6 md:py-8 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Left - Description */}

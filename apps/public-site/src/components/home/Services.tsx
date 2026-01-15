@@ -24,12 +24,12 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-16 lg:py-24 bg-[#1a1a1a]">
+    <section id="services" className="py-6 md:py-8 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
           <h2
-            className="font-heading text-3xl lg:text-5xl font-normal text-white"
+            className="font-heading text-3xl lg:text-5xl font-normal text-foreground"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Our Services
@@ -78,14 +78,14 @@ export default function Services() {
                     <div>
                       {/* Title */}
                       <h3
-                        className="font-heading text-xl md:text-2xl lg:text-3xl text-white mb-3 md:mb-4"
+                        className="font-heading text-xl md:text-2xl lg:text-3xl text-foreground mb-3 md:mb-4"
                         style={{ fontFamily: "'Playfair Display', serif" }}
                       >
                         {service.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="text-white/60 leading-relaxed mb-6 text-sm md:text-base">
+                      <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
                         {service.description}
                       </p>
 

@@ -101,7 +101,7 @@ function RoomCard({ room }: { room: (typeof rooms)[0] }) {
 
         {/* Back Side */}
         <div
-          className="absolute inset-0 w-full h-full bg-[#222] p-8 flex flex-col justify-center rounded-lg overflow-hidden border border-white/10"
+          className="absolute inset-0 w-full h-full bg-card p-8 flex flex-col justify-center rounded-lg overflow-hidden border border-foreground/10"
           style={{
             backfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
@@ -113,7 +113,7 @@ function RoomCard({ room }: { room: (typeof rooms)[0] }) {
               e.stopPropagation()
               setIsFlipped(false)
             }}
-            className="absolute top-4 right-4 p-2 text-white/50 hover:text-white lg:hidden"
+            className="absolute top-4 right-4 p-2 text-muted-foreground hover:text-foreground lg:hidden"
           >
             <HiX className="w-6 h-6" />
           </button>
@@ -125,17 +125,17 @@ function RoomCard({ room }: { room: (typeof rooms)[0] }) {
             {room.price}$ / Night
           </p>
           <h3
-            className="font-heading text-2xl text-white mb-4"
+            className="font-heading text-2xl text-foreground mb-4"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {room.name}
           </h3>
-          <p className="text-white/60 text-sm mb-6 leading-relaxed line-clamp-3">
+          <p className="text-muted-foreground text-sm mb-6 leading-relaxed line-clamp-3">
             {room.description}
           </p>
 
           {/* Amenities */}
-          <div className="grid grid-cols-2 gap-3 text-sm text-white/70 mb-8">
+          <div className="grid grid-cols-2 gap-3 text-sm text-foreground/70 mb-8">
             {cardAmenities.map((amenity, i) => (
               <span key={i} className="flex items-center gap-2">
                 <span style={{ color: 'var(--hotel-accent)' }}>
@@ -181,11 +181,7 @@ export default function Rooms() {
   }
 
   return (
-    <section
-      ref={sectionRef}
-      id="rooms"
-      className="py-16 lg:py-24 bg-[#1a1a1a]"
-    >
+    <section ref={sectionRef} id="rooms" className="py-6 md:py-8 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
@@ -193,10 +189,10 @@ export default function Rooms() {
             className="text-xs md:text-sm tracking-[0.3em] uppercase mb-4"
             style={{ color: 'var(--hotel-accent)' }}
           >
-            Boutique Hotel
+            Iconic Plaza Hotel
           </p>
           <h2
-            className="font-heading text-3xl lg:text-5xl font-normal text-white"
+            className="font-heading text-3xl lg:text-5xl font-normal text-foreground"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Rooms & Suites
@@ -219,7 +215,7 @@ export default function Rooms() {
                 currentPage > 0 ? currentPage - 1 : totalPages - 1,
               )
             }
-            className="w-10 h-10 border border-white/30 flex items-center justify-center text-white hover:border-white/50 hover:bg-white/10 transition-all cursor-pointer"
+            className="w-10 h-10 border border-foreground/30 flex items-center justify-center text-foreground hover:border-foreground/50 hover:bg-foreground/10 transition-all cursor-pointer"
           >
             <svg
               className="w-4 h-4"
@@ -243,7 +239,9 @@ export default function Rooms() {
                 key={i}
                 onClick={() => handlePageChange(i)}
                 className={`w-3 h-3 rounded-full transition-colors cursor-pointer ${
-                  i === currentPage ? '' : 'bg-white/30 hover:bg-white/50'
+                  i === currentPage
+                    ? ''
+                    : 'bg-foreground/30 hover:bg-foreground/50'
                 }`}
                 style={
                   i === currentPage
@@ -261,7 +259,7 @@ export default function Rooms() {
                 currentPage < totalPages - 1 ? currentPage + 1 : 0,
               )
             }
-            className="w-10 h-10 border border-white/30 flex items-center justify-center text-white hover:border-white/50 hover:bg-white/10 transition-all cursor-pointer"
+            className="w-10 h-10 border border-foreground/30 flex items-center justify-center text-foreground hover:border-foreground/50 hover:bg-foreground/10 transition-all cursor-pointer"
           >
             <svg
               className="w-4 h-4"

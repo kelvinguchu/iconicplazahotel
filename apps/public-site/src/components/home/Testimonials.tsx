@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'motion/react'
 
 const testimonials = [
   {
-    title: 'A Unique Boutique Hotel!',
+    title: 'Great Hotel!',
     text: 'An absolutely wonderful experience! The staff went above and beyond to make our stay memorable. The rooms were immaculate and the views were breathtaking.',
     author: 'Sarah Johnson',
     role: 'Customer review',
@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     title: 'Highly Recommended!',
-    text: 'A unique boutique hotel with exceptional service. From the moment we arrived, we felt like royalty. Highly recommended for anyone seeking luxury.',
+    text: 'A restaurant with exceptional service. From the moment we arrived, we felt like royalty. Highly recommended for anyone seeking luxury.',
     author: 'Michael Chen',
     role: 'Customer review',
     avatar: '/images/about.jpg',

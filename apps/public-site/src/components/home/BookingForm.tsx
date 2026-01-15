@@ -79,9 +79,9 @@ export default function BookingForm() {
           </div>
 
           {/* Right - Form Card */}
-          <div className="bg-[#222]/95 backdrop-blur-sm p-6 lg:p-10 rounded-lg">
+          <div className="bg-card p-6 lg:p-10 rounded-lg shadow-xl">
             <h2
-              className="font-heading text-2xl lg:text-3xl font-normal text-white mb-8 text-center"
+              className="font-heading text-2xl lg:text-3xl font-normal text-foreground mb-8 text-center"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Hotel Booking Form
@@ -91,45 +91,49 @@ export default function BookingForm() {
               {/* Row 1: Check In / Check Out */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-white/60 text-xs mb-2 uppercase tracking-wider">
+                  <label className="block text-muted-foreground text-xs mb-2 uppercase tracking-wider">
                     Check In
                   </label>
                   <Popover>
                     <PopoverTrigger asChild>
                       <Button
                         variant="outline"
-                        className="w-full h-12 bg-[#333] border-white/10 text-white rounded-none justify-between cursor-pointer hover:bg-[#444] hover:text-white"
+                        className="w-full h-12 bg-secondary border-border text-foreground rounded-none justify-between cursor-pointer hover:bg-muted"
                       >
                         <span
-                          className={checkIn ? 'text-white' : 'text-white/50'}
+                          className={
+                            checkIn
+                              ? 'text-foreground'
+                              : 'text-muted-foreground'
+                          }
                         >
                           {checkIn
                             ? format(checkIn, 'MMM dd, yyyy')
                             : 'Select date'}
                         </span>
-                        <HiOutlineCalendar className="w-5 h-5 text-white/70" />
+                        <HiOutlineCalendar className="w-5 h-5 text-muted-foreground" />
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0 bg-[#333] border-white/10">
+                    <PopoverContent className="w-auto p-0 bg-card border-border">
                       <Calendar
                         mode="single"
                         selected={checkIn}
                         onSelect={setCheckIn}
                         disabled={(date) => date < new Date()}
-                        className="bg-[#333] text-white [&_button]:text-white [&_button:hover]:bg-white/10 [&_button:hover]:text-white [&_.rdp-day_button]:text-white [&_.rdp-weekday]:text-white/60 [&_.rdp-caption_label]:text-white [&_.rdp-button_previous]:text-white [&_.rdp-button_next]:text-white **:data-selected:bg-hotel-accent **:data-selected:text-white **:data-today:bg-white/10 **:data-outside:text-white/30"
+                        className="bg-card text-foreground"
                       />
                     </PopoverContent>
                   </Popover>
                 </div>
                 <div>
-                  <label className="block text-white/60 text-xs mb-2 uppercase tracking-wider">
+                  <label className="block text-muted-foreground text-xs mb-2 uppercase tracking-wider">
                     Check Out
                   </label>
                   <Popover>
                     <PopoverTrigger asChild>
                       <Button
                         variant="outline"
-                        className="w-full h-12 bg-[#333] border-white/10 text-white rounded-none justify-between cursor-pointer hover:bg-[#444] hover:text-white"
+                        className="w-full h-12 bg-secondary border-border text-foreground rounded-none justify-between cursor-pointer hover:bg-muted"
                       >
                         <span
                           className={checkOut ? 'text-white' : 'text-white/50'}
@@ -138,16 +142,16 @@ export default function BookingForm() {
                             ? format(checkOut, 'MMM dd, yyyy')
                             : 'Select date'}
                         </span>
-                        <HiOutlineCalendar className="w-5 h-5 text-white/70" />
+                        <HiOutlineCalendar className="w-5 h-5 text-muted-foreground" />
                       </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0 bg-[#333] border-white/10">
+                    <PopoverContent className="w-auto p-0 bg-card border-border">
                       <Calendar
                         mode="single"
                         selected={checkOut}
                         onSelect={setCheckOut}
                         disabled={(date) => date < (checkIn || new Date())}
-                        className="bg-[#333] text-white [&_button]:text-white [&_button:hover]:bg-white/10 [&_button:hover]:text-white [&_.rdp-day_button]:text-white [&_.rdp-weekday]:text-white/60 [&_.rdp-caption_label]:text-white [&_.rdp-button_previous]:text-white [&_.rdp-button_next]:text-white **:data-selected:bg-hotel-accent **:data-selected:text-white **:data-today:bg-white/10 **:data-outside:text-white/30"
+                        className="bg-card text-foreground"
                       />
                     </PopoverContent>
                   </Popover>
@@ -157,19 +161,19 @@ export default function BookingForm() {
               {/* Row 2: Adults / Children */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-white/60 text-xs mb-2 uppercase tracking-wider">
+                  <label className="block text-muted-foreground text-xs mb-2 uppercase tracking-wider">
                     Adults
                   </label>
                   <Select value={adults} onValueChange={setAdults}>
-                    <SelectTrigger className="bg-[#333] border-white/10 text-white h-12 rounded-none w-full cursor-pointer [&>svg]:text-white/70">
+                    <SelectTrigger className="bg-secondary border-border text-foreground h-12 rounded-none w-full cursor-pointer">
                       <SelectValue placeholder="Adults" />
                     </SelectTrigger>
-                    <SelectContent className="bg-[#333] border-white/10">
+                    <SelectContent className="bg-card border-border">
                       {[1, 2, 3, 4, 5, 6].map((n) => (
                         <SelectItem
                           key={n}
                           value={n.toString()}
-                          className="text-white hover:bg-white/10 cursor-pointer focus:bg-white/10 focus:text-white"
+                          className="text-foreground hover:bg-secondary cursor-pointer focus:bg-secondary focus:text-foreground"
                         >
                           {n} Adult{n > 1 ? 's' : ''}
                         </SelectItem>
@@ -178,19 +182,19 @@ export default function BookingForm() {
                   </Select>
                 </div>
                 <div>
-                  <label className="block text-white/60 text-xs mb-2 uppercase tracking-wider">
+                  <label className="block text-muted-foreground text-xs mb-2 uppercase tracking-wider">
                     Children
                   </label>
                   <Select value={children} onValueChange={setChildren}>
-                    <SelectTrigger className="bg-[#333] border-white/10 text-white h-12 rounded-none w-full cursor-pointer [&>svg]:text-white/70">
+                    <SelectTrigger className="bg-secondary border-border text-foreground h-12 rounded-none w-full cursor-pointer">
                       <SelectValue placeholder="Children" />
                     </SelectTrigger>
-                    <SelectContent className="bg-[#333] border-white/10">
+                    <SelectContent className="bg-card border-border">
                       {[0, 1, 2, 3, 4].map((n) => (
                         <SelectItem
                           key={n}
                           value={n.toString()}
-                          className="text-white hover:bg-white/10 cursor-pointer focus:bg-white/10 focus:text-white"
+                          className="text-foreground hover:bg-secondary cursor-pointer focus:bg-secondary focus:text-foreground"
                         >
                           {n} Child{n !== 1 ? 'ren' : ''}
                         </SelectItem>

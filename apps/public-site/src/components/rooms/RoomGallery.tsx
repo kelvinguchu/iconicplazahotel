@@ -9,7 +9,7 @@ export default function RoomGallery({ room }: RoomGalleryProps) {
   const [activeImage, setActiveImage] = useState(0)
 
   return (
-    <section className="py-16 lg:py-24 bg-[#f8f5f0]">
+    <section className="py-6 md:py-8 bg-[#f8f5f0]">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-12">

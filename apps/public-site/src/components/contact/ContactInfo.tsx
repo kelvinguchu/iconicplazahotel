@@ -9,7 +9,7 @@ export default function ContactInfo() {
   return (
     <>
       {/* Main Contact Info Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-6 md:py-8 bg-card">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Section Header */}
           <div className="text-center mb-12 lg:mb-16">
@@ -82,10 +82,10 @@ export default function ContactInfo() {
       </section>
 
       {/* Department Contacts - Full Width */}
-      <section className="py-16 bg-[#1a1a1a]">
+      <section className="py-6 md:py-8 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
           <h3
-            className="font-heading text-xl md:text-2xl text-white text-center mb-10"
+            className="font-heading text-xl md:text-2xl text-foreground text-center mb-10"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Department Contacts
@@ -93,96 +93,96 @@ export default function ContactInfo() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <h4 className="text-white/60 text-xs uppercase tracking-wider mb-2">
+              <h4 className="text-muted-foreground text-xs uppercase tracking-wider mb-2">
                 General Enquiries
               </h4>
               <a
                 href="mailto:info@iconicplazahotels.com"
-                className="text-white text-sm hover:opacity-70 transition-opacity break-all"
+                className="text-foreground text-sm hover:opacity-70 transition-opacity break-all"
               >
                 info@iconicplazahotels.com
               </a>
             </div>
 
             <div>
-              <h4 className="text-white/60 text-xs uppercase tracking-wider mb-2">
+              <h4 className="text-muted-foreground text-xs uppercase tracking-wider mb-2">
                 Reservations
               </h4>
               <a
                 href="mailto:reservations@iconicplazahotels.com"
-                className="text-white text-sm hover:opacity-70 transition-opacity break-all"
+                className="text-foreground text-sm hover:opacity-70 transition-opacity break-all"
               >
                 reservations@iconicplazahotels.com
               </a>
             </div>
 
             <div>
-              <h4 className="text-white/60 text-xs uppercase tracking-wider mb-2">
+              <h4 className="text-muted-foreground text-xs uppercase tracking-wider mb-2">
                 Guest Relations
               </h4>
               <a
                 href="mailto:guestrelations@iconicplazahotels.com"
-                className="text-white text-sm hover:opacity-70 transition-opacity break-all"
+                className="text-foreground text-sm hover:opacity-70 transition-opacity break-all"
               >
                 guestrelations@iconicplazahotels.com
               </a>
             </div>
 
             <div>
-              <h4 className="text-white/60 text-xs uppercase tracking-wider mb-2">
+              <h4 className="text-muted-foreground text-xs uppercase tracking-wider mb-2">
                 Events & Banquets
               </h4>
               <a
                 href="mailto:events@iconicplazahotels.com"
-                className="text-white text-sm hover:opacity-70 transition-opacity break-all"
+                className="text-foreground text-sm hover:opacity-70 transition-opacity break-all"
               >
                 events@iconicplazahotels.com
               </a>
             </div>
 
             <div>
-              <h4 className="text-white/60 text-xs uppercase tracking-wider mb-2">
+              <h4 className="text-muted-foreground text-xs uppercase tracking-wider mb-2">
                 Group Reservations
               </h4>
               <a
                 href="mailto:groups@iconicplazahotels.com"
-                className="text-white text-sm hover:opacity-70 transition-opacity break-all"
+                className="text-foreground text-sm hover:opacity-70 transition-opacity break-all"
               >
                 groups@iconicplazahotels.com
               </a>
             </div>
 
             <div>
-              <h4 className="text-white/60 text-xs uppercase tracking-wider mb-2">
+              <h4 className="text-muted-foreground text-xs uppercase tracking-wider mb-2">
                 Concierge
               </h4>
               <a
                 href="mailto:concierge@iconicplazahotels.com"
-                className="text-white text-sm hover:opacity-70 transition-opacity break-all"
+                className="text-foreground text-sm hover:opacity-70 transition-opacity break-all"
               >
                 concierge@iconicplazahotels.com
               </a>
             </div>
 
             <div>
-              <h4 className="text-white/60 text-xs uppercase tracking-wider mb-2">
+              <h4 className="text-muted-foreground text-xs uppercase tracking-wider mb-2">
                 Feedback
               </h4>
               <a
                 href="mailto:feedback@iconicplazahotels.com"
-                className="text-white text-sm hover:opacity-70 transition-opacity break-all"
+                className="text-foreground text-sm hover:opacity-70 transition-opacity break-all"
               >
                 feedback@iconicplazahotels.com
               </a>
             </div>
 
             <div>
-              <h4 className="text-white/60 text-xs uppercase tracking-wider mb-2">
+              <h4 className="text-muted-foreground text-xs uppercase tracking-wider mb-2">
                 Careers
               </h4>
               <a
                 href="mailto:careers@iconicplazahotels.com"
-                className="text-white text-sm hover:opacity-70 transition-opacity break-all"
+                className="text-foreground text-sm hover:opacity-70 transition-opacity break-all"
               >
                 careers@iconicplazahotels.com
               </a>

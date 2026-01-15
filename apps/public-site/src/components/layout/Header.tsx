@@ -74,9 +74,7 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 ${
-          isScrolled
-            ? 'bg-black/90 backdrop-blur-sm shadow-md'
-            : 'bg-transparent'
+          isScrolled ? 'bg-card shadow-md' : 'bg-transparent'
         }`}
       >
         <div className="container mx-auto px-3 md:px-6 lg:px-12 flex items-center justify-between">
@@ -103,7 +101,7 @@ export default function Header() {
                 {link.href.startsWith('/') && !link.href.includes('#') ? (
                   <Link
                     to={link.href}
-                    className="flex items-center gap-1 text-sm tracking-wider text-white/90 hover:text-white transition-colors uppercase cursor-pointer [&.active]:text-hotel-accent"
+                    className={`flex items-center gap-1 text-sm tracking-wider transition-colors uppercase cursor-pointer [&.active]:text-hotel-accent ${isScrolled ? 'text-foreground/90 hover:text-foreground' : 'text-white/90 hover:text-white'}`}
                   >
                     {link.name}
                     {link.dropdown && (
@@ -113,7 +111,7 @@ export default function Header() {
                 ) : (
                   <button
                     onClick={() => handleNavClick(link.href)}
-                    className="flex items-center gap-1 text-sm tracking-wider text-white/90 hover:text-white transition-colors uppercase cursor-pointer"
+                    className={`flex items-center gap-1 text-sm tracking-wider transition-colors uppercase cursor-pointer ${isScrolled ? 'text-foreground/90 hover:text-foreground' : 'text-white/90 hover:text-white'}`}
                   >
                     {link.name}
                     {link.dropdown && (
@@ -125,12 +123,12 @@ export default function Header() {
                 {/* Dropdown */}
                 {link.dropdown && activeDropdown === link.name && (
                   <div className="absolute top-full left-0 pt-2">
-                    <div className="bg-black/95 backdrop-blur-sm min-w-[200px] py-3 shadow-xl rounded-b-md border-t-2 border-hotel-accent">
+                    <div className="bg-card min-w-[200px] py-3 shadow-xl rounded-b-md border-t-2 border-hotel-accent">
                       {link.dropdown.map((item) => (
                         <button
                           key={item.name}
                           onClick={() => handleNavClick(item.href)}
-                          className="block w-full text-left px-6 py-2 text-sm text-white/80 hover:text-white hover:bg-white/10 transition-colors cursor-pointer whitespace-nowrap"
+                          className="block w-full text-left px-6 py-2 text-sm text-foreground/80 hover:text-foreground hover:bg-foreground/10 transition-colors cursor-pointer whitespace-nowrap"
                         >
                           {item.name}
                         </button>
@@ -145,17 +143,19 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <button className="lg:hidden p-2 text-white cursor-pointer hover:text-hotel-accent transition-colors">
+              <button
+                className={`lg:hidden p-2 cursor-pointer hover:text-hotel-accent transition-colors ${isScrolled ? 'text-foreground' : 'text-white'}`}
+              >
                 <HiOutlineMenu className="w-6 h-6" />
                 <span className="sr-only">Open menu</span>
               </button>
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="bg-black/95 border-l-gray-800 text-white min-w-[90vw] px-3"
+              className="bg-card border-l-border text-foreground min-w-[90vw] px-3"
             >
-              <SheetHeader className="text-left text-white font-heading text-xl border-b border-white/10 px-2 py-2">
-                <SheetTitle className="text-white">Menu</SheetTitle>
+              <SheetHeader className="text-left text-foreground font-heading text-xl border-b border-foreground/10 px-2 py-2">
+                <SheetTitle className="text-foreground">Menu</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-4 px-2">
                 {navLinks.map((link) => (
@@ -164,14 +164,14 @@ export default function Header() {
                       <Link
                         to={link.href}
                         onClick={() => setIsOpen(false)}
-                        className="text-lg tracking-wider text-white/90 hover:text-hotel-accent transition-colors uppercase font-medium [&.active]:text-hotel-accent"
+                        className="text-lg tracking-wider text-foreground/90 hover:text-hotel-accent transition-colors uppercase font-medium [&.active]:text-hotel-accent"
                       >
                         {link.name}
                       </Link>
                     ) : (
                       <button
                         onClick={() => handleNavClick(link.href)}
-                        className="text-left text-lg tracking-wider text-white/90 hover:text-hotel-accent transition-colors uppercase font-medium"
+                        className="text-left text-lg tracking-wider text-foreground/90 hover:text-hotel-accent transition-colors uppercase font-medium"
                       >
                         {link.name}
                       </button>
@@ -179,12 +179,12 @@ export default function Header() {
 
                     {/* Mobile Dropdown Items */}
                     {link.dropdown && (
-                      <div className="flex flex-col gap-3 mt-3 pl-4 border-l border-white/10">
+                      <div className="flex flex-col gap-3 mt-3 pl-4 border-l border-foreground/10">
                         {link.dropdown.map((item) => (
                           <button
                             key={item.name}
                             onClick={() => handleNavClick(item.href)}
-                            className="text-left text-sm text-white/60 hover:text-white transition-colors uppercase tracking-wide"
+                            className="text-left text-sm text-muted-foreground hover:text-foreground transition-colors uppercase tracking-wide"
                           >
                             {item.name}
                           </button>

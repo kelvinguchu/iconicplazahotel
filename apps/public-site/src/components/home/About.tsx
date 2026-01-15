@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="py-16 lg:py-24 bg-[#1a1a1a]">
+    <section id="about" className="py-6 md:py-8 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Content Side - 50% */}
@@ -13,20 +13,20 @@ export default function About() {
             </p>
 
             <h2
-              className="font-heading text-3xl lg:text-4xl font-normal text-white mb-6 leading-tight"
+              className="font-heading text-3xl lg:text-4xl font-normal text-foreground mb-6 leading-tight"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Welcome to Iconic Plaza Hotel
             </h2>
 
-            <p className="text-white/60 leading-relaxed mb-6 text-sm md:text-base">
+            <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
               Welcome to the finest luxury hotel experience. Our hotel combines
               elegant design with world-class amenities to create an
               unforgettable stay. Every detail has been carefully crafted to
               ensure your comfort and satisfaction.
             </p>
 
-            <p className="text-white/60 leading-relaxed mb-8 text-sm md:text-base">
+            <p className="text-muted-foreground leading-relaxed mb-8 text-sm md:text-base">
               Experience our exceptional hospitality with stunning views,
               gourmet dining, rejuvenating spa treatments, and personalized
               service that exceeds your expectations.

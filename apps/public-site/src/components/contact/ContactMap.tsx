@@ -1,6 +1,6 @@
 export default function ContactMap() {
   return (
-    <section className="py-16 lg:py-24 bg-[#1a1a1a]">
+    <section className="py-6 md:py-8 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -11,7 +11,7 @@ export default function ContactMap() {
             Find Us
           </p>
           <h2
-            className="font-heading text-3xl lg:text-5xl font-normal text-white"
+            className="font-heading text-3xl lg:text-5xl font-normal text-foreground"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Our Location
@@ -36,36 +36,36 @@ export default function ContactMap() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           <div className="text-center">
             <h3
-              className="font-heading text-xl text-white mb-3"
+              className="font-heading text-xl text-foreground mb-3"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               From JKIA Airport
             </h3>
-            <p className="text-white/60 text-sm">
+            <p className="text-muted-foreground text-sm">
               25 minutes drive via Mombasa Road. Airport transfer service
               available upon request.
             </p>
           </div>
           <div className="text-center">
             <h3
-              className="font-heading text-xl text-white mb-3"
+              className="font-heading text-xl text-foreground mb-3"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               From Wilson Airport
             </h3>
-            <p className="text-white/60 text-sm">
+            <p className="text-muted-foreground text-sm">
               15 minutes drive via Langata Road. Domestic flight connections to
               Maasai Mara and coastal destinations.
             </p>
           </div>
           <div className="text-center">
             <h3
-              className="font-heading text-xl text-white mb-3"
+              className="font-heading text-xl text-foreground mb-3"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               City Center
             </h3>
-            <p className="text-white/60 text-sm">
+            <p className="text-muted-foreground text-sm">
               Located in the heart of Nairobi CBD, walking distance to major
               business and shopping districts.
             </p>
