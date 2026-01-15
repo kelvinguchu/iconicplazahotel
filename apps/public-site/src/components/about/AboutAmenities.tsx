@@ -1,18 +1,17 @@
 import {
-  MdOutlinePool,
+  MdOutlineMosque,
   MdOutlineSpa,
   MdOutlineRestaurant,
   MdOutlineFitnessCenter,
   MdOutlineMeetingRoom,
-  MdOutlineLocalBar,
+  MdOutlineCoffee,
 } from 'react-icons/md'
 
 const amenities = [
   {
-    icon: MdOutlinePool,
-    title: 'Infinity Pool',
-    description:
-      'Rooftop infinity pool with panoramic views of Nairobi skyline',
+    icon: MdOutlineMosque,
+    title: 'Prayer Room',
+    description: 'Peaceful and dedicated prayer room available for all guests',
   },
   {
     icon: MdOutlineSpa,
@@ -36,9 +35,10 @@ const amenities = [
     description: 'Modern meeting rooms and grand ballroom for 500+ guests',
   },
   {
-    icon: MdOutlineLocalBar,
+    icon: MdOutlineCoffee,
     title: 'Rooftop Lounge',
-    description: 'Exclusive bar with craft cocktails and live entertainment',
+    description:
+      'Exclusive lounge with handcrafted mocktails and live entertainment',
   },
 ]
 

@@ -19,7 +19,7 @@ export default function RestaurantHero() {
           className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal text-white"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          Restaurant & Bar
+          Restaurant
         </h1>
       </div>
     </section>

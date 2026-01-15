@@ -17,9 +17,9 @@ const venues = [
   },
   {
     name: 'Skyline Lounge',
-    subtitle: 'Rooftop Bar',
+    subtitle: 'Rooftop Lounge',
     description:
-      'Perched on the top floor with panoramic views of Nairobi, our rooftop lounge offers signature cocktails, premium spirits, and light bites. The perfect setting for sunset drinks or late-night conversations.',
+      'Perched on the top floor with panoramic views of Nairobi, our rooftop lounge offers signature mocktails, premium juices, and light bites. The perfect setting for sunset beverages or late-night conversations.',
     hours: '4:00 PM - 2:00 AM',
     image: '/images/restaurant3.jpg',
   },

@@ -2,7 +2,7 @@ import { HiOutlineTruck, HiOutlineWifi } from 'react-icons/hi'
 import {
   MdOutlineLocalParking,
   MdOutlineRoomService,
-  MdOutlinePool,
+  MdOutlineMosque,
   MdOutlineFreeBreakfast,
 } from 'react-icons/md'
 
@@ -25,10 +25,10 @@ const facilities = [
     description: '24/7 room service to cater to your every need at any hour.',
   },
   {
-    icon: MdOutlinePool,
-    title: 'Swimming Pool',
+    icon: MdOutlineMosque,
+    title: 'Prayer Facilities',
     description:
-      'Enjoy our heated infinity pool with stunning panoramic views.',
+      'Dedicated calm and quiet spaces available for prayer and reflection.',
   },
   {
     icon: HiOutlineWifi,

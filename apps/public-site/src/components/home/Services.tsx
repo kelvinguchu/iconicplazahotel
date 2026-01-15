@@ -1,7 +1,7 @@
 const services = [
   {
     number: '01',
-    title: 'Restaurant & Bar',
+    title: 'Fine Dining',
     description:
       'Experience exquisite culinary delights at our award-winning restaurant. From breakfast to dinner, our chef prepares the finest dishes using fresh, local ingredients.',
     image: '/images/restaurant.jpg',

@@ -32,7 +32,7 @@ export const rooms: Room[] = [
     amenities: [
       'Free WiFi',
       'Air Conditioning',
-      'Mini Bar',
+      'Mini Fridge',
       'In-Room Safe',
       'Flat Screen TV',
       'Tea & Coffee Maker',
@@ -53,7 +53,7 @@ export const rooms: Room[] = [
     description:
       'Spacious accommodation designed for families traveling together.',
     longDescription:
-      'Our Family Room is thoughtfully designed to accommodate families with comfort and convenience. The generous space includes a queen bed and additional sleeping arrangements, ensuring everyone has room to relax. Connected to our family-friendly amenities, including the pool and kids activities.',
+      'Our Family Room is thoughtfully designed to accommodate families with comfort and convenience. The generous space includes a queen bed and additional sleeping arrangements, ensuring everyone has room to relax. Connected to our family-friendly amenities and kids activities.',
     size: '45 sqm',
     capacity: '1-4 Guests',
     bedType: 'Queen Bed + Sofa Bed',
@@ -61,7 +61,7 @@ export const rooms: Room[] = [
     amenities: [
       'Free WiFi',
       'Air Conditioning',
-      'Mini Bar',
+      'Mini Fridge',
       'In-Room Safe',
       'Flat Screen TV',
       'Tea & Coffee Maker',
@@ -91,7 +91,7 @@ export const rooms: Room[] = [
     amenities: [
       'Free WiFi',
       'Air Conditioning',
-      'Mini Bar',
+      'Mini Fridge',
       'In-Room Safe',
       'Flat Screen TV',
       'Nespresso Machine',
@@ -122,7 +122,7 @@ export const rooms: Room[] = [
     amenities: [
       'Free WiFi',
       'Air Conditioning',
-      'Premium Mini Bar',
+      'Premium Mini Fridge',
       'In-Room Safe',
       '55" Smart TV',
       'Nespresso Machine',
@@ -154,7 +154,7 @@ export const rooms: Room[] = [
     amenities: [
       'Free WiFi',
       'Air Conditioning',
-      'Healthy Mini Bar',
+      'Healthy Refreshments',
       'In-Room Safe',
       'Smart TV',
       'Aromatherapy Diffuser',
@@ -187,7 +187,7 @@ export const rooms: Room[] = [
     amenities: [
       'Free WiFi',
       'Air Conditioning',
-      'Premium Stocked Bar',
+      'Premium Refreshments',
       'In-Room Safe',
       '65" Smart TV',
       'Nespresso & Espresso Machine',
